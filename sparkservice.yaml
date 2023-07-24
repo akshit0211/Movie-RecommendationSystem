@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sparkservice
+spec:
+  selector:
+    app: spark
+  ports:
+  - protocol: TCP
+    port: 81

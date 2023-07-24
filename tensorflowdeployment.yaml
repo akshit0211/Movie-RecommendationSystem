@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tensorflowdeployment
+  labels:
+    app: tensorflow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tensorflow
+  template:
+    metadata:
+      labels:
+        app: tensorflow
+    spec:
+      containers:
+      - name: tensorflow
+        image: jupyter/tensorflow-notebook:latest
